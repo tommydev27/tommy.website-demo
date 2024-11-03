@@ -5,163 +5,267 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" />
     <title>tommy.developer</title>
-    <style>
-        body {
-            margin: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: black;
-            color: black;
-            font-family: monospace;
-            overflow: hidden;
-            position: relative;
-        }
-        .background-gif {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color:#E6E6FA ;
-            background-size: cover;
-            background-position: center;
-            z-index: -1;
-        }
+  <style>
 
-        .console {
-            width: 80%;
-            height: 60%;
-            background: white;
-            border: 1px solid #1E90FF;
-            border-radius: 20px;
-            padding: 20px;
-            box-shadow: 0 0 10px white;
-            overflow: hidden;
-            position: relative;
-        }
+html, body {
+    font-family: Arial, sans-serif;
+    height: 0%;
+    touch-action: none; /* for touch screen */
 
-        .console-header {
-            color: black;
-            font-size: 24px;
+    animation: slide 5s ease-in-out infinite alternate; /* Menambahkan animasi geser */
+}
+        .profile-name {
+            font-size: 15px;
+            margin-left: 100px;
             font-weight: bold;
-            text-align: center;
-            margin-bottom: 20px;
-            animation: blink 1s step-start infinite;
+            color: #333;
+            margin-top: -1px;
         }
 
-        @keyframes blink {
-            0%, 100% {
-                opacity: 1;
-            }
-            50% {
-                opacity: 0;
-            }
-        }
-
-        .console-content {
-            white-space: pre;
-            height: calc(100% - 70px);
-            overflow: hidden;
-            position: relative;
-        }
-
-        .typing {
-            animation: typing 14s linear infinite;
-        }
-
-        @keyframes typing {
-            from { transform: translateY(100%); }
-            to { transform: translateY(0); }
-        }
-
-        .hacking-text {
-            color: black;
-            font-size: 12px;
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            white-space: nowrap;
-        }
-
-        button {
-            position: absolute;
-            bottom: 10px;
-            left: 10px;
-            margin: 9px;
-            background-color: gray;
+        .profile-name .material-symbols-outlined {
+            font-size: 15px;
             color: white;
-            border: 1px solid white;
-            padding: 10px;
-            border-radius: 100px;
-            font-size: 8px;
-            cursor: pointer;
+            margin-left: 0px;
+            background-color: #007bff;
+            border-radius: 50%;
+        }
+        hr {
+            border: none; /* Menghilangkan border default */
+            height: 1px; /* Ketebalan garis */
+            background-color: #000; /* Warna garis */
+            margin: 0px 0; /* Jarak atas dan bawah */
         }
 
-        button:disabled {
-            background: gray;
-            cursor: not-allowed;
+    100% {
+        transform: translateX(5px); /* Geser sedikit ke kanan */
+    }
+}
+
+
+    body {
+      transform-style: preserve-3d;
+    }
+
+    img {
+      border-radius: 18px;
+      width: 100px;
+      height: auto;
+    }
+
+    #drag-container,
+    #spin-container {
+      position: relative;
+      display: flex;
+      margin: auto;
+      transform-style: preserve-3d;
+      transform: rotateX(-10deg);
+    }
+#drag-container img, #drag-container video {
+    position: absolute;
+    left: 0;
+    top: 100px; /* Menggeser gambar ke bawah dengan jarak 20px dari atas */
+
+    height: 140%;
+    width: 100%;
+    box-shadow: 0 0 0px #fff;
+}
+
+
+    #drag-container img:hover, #drag-container video:hover {
+      box-shadow: 0 0 15px #0056b3;
+    }
+
+
+
+
+    @keyframes spinRevert {
+      from { transform: rotateY(360deg); }
+      to { transform: rotateY(0deg); }
+    }
+
+    /* Form CSS */
+    .login-container {
+      position: absolute;
+      bottom: 40px;
+      width: 40%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .login-form a {
+      display: inline-block;
+      width: 280%;
+      padding: 10px;
+      background-color: #1877f2;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 100px;
+      font-size: 15px;
+      font-weight: bold;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .login-form a:hover {
+      background-color: #145dbf;
+    }
+footer {
+    position: fixed; /* Menetapkan footer di posisi tetap di bawah */
+    bottom: 2%;       /* Posisi dari bawah */
+    left: 35%;        /* Jarak dari kiri */
+    font-size: 12px;
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+    
+  </style>
+</head>
+
+<body>
+      <p class="profile-name">Tommy Developer
+        <span class="material-symbols-outlined">check_circle</span>
+    </p>
+<hr> <!-- Garis horizontal -->
+  <div id="drag-container">
+    <div id="spin-container">
+      <!-- Add your images here -->
+      <img src="https://iili.io/2okTRvn.md.jpg" alt=""/>
+      <img src="https://iili.io/2okuQDb.md.jpg" alt=""/>
+      <img src="https://iili.io/2okAgIa.md.jpg" alt=""/>
+      <img src="https://iili.io/2ok5qcN.md.jpg" alt=""/>
+      <img src="https://iili.io/2ok7XXs.md.jpg" alt=""/>
+      <img src="https://iili.io/2okYE6x.md.jpg" alt=""/>
+    </div>
+    <div id="ground"></div>
+  </div>
+
+  <div id="music-container"></div>
+
+  <div class="login-container">
+    <div class="login-form">
+      <a href="index(88).html" target="_blank">Selanjutnya</a>
+    </div>
+  </div>
+
+  <script>
+    var radius = 150; // radius ukuran rotasi
+    var autoRotate = true; // otomatis berputar
+    var rotateSpeed = -20; // durasi rotasi
+    var imgWidth = 155; // lebar gambar
+    var imgHeight = 240; // tinggi gambar
+    
+
+    setTimeout(init, 10);
+    var odrag = document.getElementById("drag-container");
+    var ospin = document.getElementById("spin-container");
+    var aImg = ospin.getElementsByTagName("img");
+    var aEle = [...aImg]; 
+
+    ospin.style.width = imgWidth + "px";
+    ospin.style.height = imgHeight + "px";
+
+
+
+      function init(delayTime) {
+        for (var i = 0; i < aEle.length; i++) {
+          aEle[i].style.transform =
+            "rotateY(" +
+            i * (360 / aEle.length) +
+            "deg) translateZ(" +
+            radius +
+            "px)";
+          aEle[i].style.transition = "transform 1s";
+          aEle[i].style.transitionDelay =
+            delayTime || (aEle.length - i) / 4 + "s";
         }
-    </style>
+      }
+
+      function applyTranform(obj) {
+        // Constrain the angle of camera (between 0 and 180)
+        if (tY > 180) tY = 180;
+        if (tY < 0) tY = 0;
+
+        // Apply the angle
+        obj.style.transform = "rotateX(" + -tY + "deg) rotateY(" + tX + "deg)";
+      }
+
+      function playSpin(yes) {
+        ospin.style.animationPlayState = yes ? "running" : "paused";
+      }
+
+      var sX,
+        sY,
+        nX,
+        nY,
+        desX = 0,
+        desY = 0,
+        tX = 0,
+        tY = 10;
+
+      // auto spin
+      if (autoRotate) {
+        var animationName = rotateSpeed > 0 ? "spin" : "spinRevert";
+        ospin.style.animation = `${animationName} ${Math.abs(
+          rotateSpeed
+        )}s infinite linear`;
+      }
+
+      // add background music
+  
+
+      // setup events
+      document.onpointerdown = function(e) {
+        clearInterval(odrag.timer);
+        e = e || window.event;
+        var sX = e.clientX,
+          sY = e.clientY;
+
+        this.onpointermove = function(e) {
+          e = e || window.event;
+          var nX = e.clientX,
+            nY = e.clientY;
+          desX = nX - sX;
+          desY = nY - sY;
+          tX += desX * 0.1;
+          tY += desY * 0.1;
+          applyTranform(odrag);
+          sX = nX;
+          sY = nY;
+        };
+
+        this.onpointerup = function(e) {
+          odrag.timer = setInterval(function() {
+            desX *= 0.95;
+            desY *= 0.95;
+            tX += desX * 0.1;
+            tY += desY * 0.1;
+            applyTranform(odrag);
+            playSpin(false);
+            if (Math.abs(desX) < 0.5 && Math.abs(desY) < 0.5) {
+              clearInterval(odrag.timer);
+              playSpin(true);
+            }
+          }, 17);
+          this.onpointermove = this.onpointerup = null;
+        };
+
+        return false;
+      };
+
+
+    </script>
+
 </head>
 <body>
-    <div class="background-gif"></div>
-    <div class="console">
-        <div class="console-header">Descript</div>
-        <div class="console-content typing">
-            web dalam pengembangan...<br>
-            tugas...<br>
-            input data<br>
-            script <br>
-            belajar code
-            selengkapnya:'';<br>
-            <span id="dynamic-text"></span>
-        </div>
-        <div class="hacking-text">TM-DEV ® </div>
-        <button onclick="redirect('https://tommydev27.github.io/tommy.website/')">
-            <span class="material-symbols-outlined">home</span>
-        </button>
+  <div class="login-container">
+    <div class="login-form">
+      <a href="index(88).html" target="_blank">Selanjutnya</a>
     </div>
-    <script>
-        function redirect(url) {
-            window.location.href = url;
-        }
+  </div>
+         <footer>Design Tommy | Versi 1.0</footer>
 
-        const texts = [
-            'Retrieving user information...',
-            'Accessing secure database...',
-            'Email:********',
-            'password:*********',
-            'Data loading...',
-            'Decrypting files...',
-            'Scanning for vulnerabilities...',
-            'Establishing connection...',
-            'Verifying credentials...',
-            'Loading profiles...',
-            'Executing commands...',
-            'Finalizing setup...',
-            'Data loading complete.'
-        ];
-
-        const dynamicTextElement = document.getElementById('dynamic-text');
-        let currentIndex = 0;
-        let intervalId;
-
-        function updateText() {
-            dynamicTextElement.textContent = texts[currentIndex];
-        }
-
-        function startTyping() {
-            updateText();
-            intervalId = setInterval(() => {
-                currentIndex = (currentIndex + 1) % texts.length;
-                updateText();
-            }, 3000);
-        }
-
-        // Initialize typing effect
-        startTyping();
-    </script>
 </body>
+
+  </body>
 </html>
