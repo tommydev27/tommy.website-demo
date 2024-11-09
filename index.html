@@ -9,10 +9,9 @@
 
 html, body {
     font-family: Arial, sans-serif;
-    height: 0%;
     touch-action: none; /* for touch screen */
 
-    animation: slide 5s ease-in-out infinite alternate; /* Menambahkan animasi geser */
+    animation: slide 0.1s ease-in-out infinite alternate; /* Menambahkan animasi geser */
 }
         .profile-name {
             font-size: 15px;
@@ -30,72 +29,65 @@ html, body {
             border-radius: 50%;
         }
         hr {
-            border: none; /* Menghilangkan border default */
+            border: 0px; /* Menghilangkan border default */
             height: 1px; /* Ketebalan garis */
             background-color: #000; /* Warna garis */
-            margin: 0px 0; /* Jarak atas dan bawah */
-        }
-
-    100% {
-        transform: translateX(5px); /* Geser sedikit ke kanan */
-    }
-}
-
-
+            margin: 0px; /* Jarak atas dan bawah */
+              }
+              
+    height: 0%;
+    touch-action: none; /* for touch screen */}
+    
     body {
       transform-style: preserve-3d;
     }
 
-    img {
+  img {
       border-radius: 18px;
-      width: 100px;
+      width: 300px;
       height: auto;
     }
-
+    
     #drag-container,
     #spin-container {
       position: relative;
       display: flex;
       margin: auto;
       transform-style: preserve-3d;
-      transform: rotateX(-10deg);
+      transform: rotateX(-20deg);
     }
-#drag-container img, #drag-container video {
+#drag-container img, 
+#drag-container video {
     position: absolute;
     left: 0;
     top: 100px; /* Menggeser gambar ke bawah dengan jarak 20px dari atas */
-
-    height: 140%;
+    height: 120%;
     width: 100%;
-    box-shadow: 0 0 0px #fff;
 }
 
-
-    #drag-container img:hover, #drag-container video:hover {
-      box-shadow: 0 0 15px #0056b3;
+    #drag-container img:hover, 
+    #drag-container video:hover {
+      box-shadow: 0 0 5px #0056b3;
     }
 
-
-
-
     @keyframes spinRevert {
-      from { transform: rotateY(360deg); }
+      from { transform: rotateY(400deg); }
       to { transform: rotateY(0deg); }
     }
 
-    /* Form CSS */
+  /* Form CSS */
     .login-container {
       position: absolute;
       bottom: 40px;
-      width: 40%;
+      width: 26%;
       display: flex;
       justify-content: center;
     }
 
     .login-form a {
       display: inline-block;
-      width: 280%;
-      padding: 10px;
+      width: 430%;
+      padding: 8px;
       background-color: #1877f2;
       color: #fff;
       text-decoration: none;
@@ -103,26 +95,39 @@ html, body {
       font-size: 15px;
       font-weight: bold;
       text-align: center;
-      cursor: pointer;
     }
-
-    .login-form a:hover {
+    
+  .login-form a:hover {
       background-color: #145dbf;
     }
+    
+   h2 {
+    font-size: 13px; /* Ukuran font */
+    color: #007bff; /* Warna teks */
+    text-align: center; /* Menyelaraskan teks ke tengah */
+    
+    /* Mengatur margin untuk posisi vertikal (atas-bawah) dan horizontal (kiri-kanan) */
+    margin-top: 270px; /* Jarak atas */
+
+    margin-left: 15px;  /* Jarak kiri */
+    margin-right: 15px; /* Jarak kanan */
+
+    /* Menambahkan padding (opsional) untuk jarak antara border dan teks */
+    padding: 10px; /* Padding di sekitar teks */
+}
+    
 footer {
     position: fixed; /* Menetapkan footer di posisi tetap di bawah */
-    bottom: 2%;       /* Posisi dari bawah */
-    left: 35%;        /* Jarak dari kiri */
+    bottom: 2%; /* Posisi dari bawah */
+    left: 35%;  /* Jarak dari kiri */
     font-size: 12px;
     color: #007bff;
     transition: color 0.3s ease;
 }
 
-    
   </style>
 </head>
-
-<body>
+  <body>
       <p class="profile-name">Tommy Developer
         <span class="material-symbols-outlined">check_circle</span>
     </p>
@@ -130,42 +135,32 @@ footer {
   <div id="drag-container">
     <div id="spin-container">
       <!-- Add your images here -->
-      <img src="https://iili.io/2okTRvn.md.jpg" alt=""/>
+      <img src="https://iili.io/2okTRvn.md.jpg" alt="https://www.facebook.com"/>
       <img src="https://iili.io/2okuQDb.md.jpg" alt=""/>
       <img src="https://iili.io/2okAgIa.md.jpg" alt=""/>
-      <img src="https://iili.io/2ok5qcN.md.jpg" alt=""/>
-      <img src="https://iili.io/2ok7XXs.md.jpg" alt=""/>
-      <img src="https://iili.io/2okYE6x.md.jpg" alt=""/>
+
+      <img src="https://iili.io/2IgFS1t.md.jpg" alt=""/>
+      <img src="https://iili.io/2Igqr21.md.jpg" alt=""/>
     </div>
-    <div id="ground"></div>
-  </div>
+   <div id="ground"></div>
+ </div>
 
-  <div id="music-container"></div>
-
-  <div class="login-container">
-    <div class="login-form">
-      <a href="index(88).html" target="_blank">Selanjutnya</a>
-    </div>
-  </div>
-
-  <script>
+ <script>
     var radius = 150; // radius ukuran rotasi
     var autoRotate = true; // otomatis berputar
     var rotateSpeed = -20; // durasi rotasi
-    var imgWidth = 155; // lebar gambar
-    var imgHeight = 240; // tinggi gambar
+    var imgWidth = 140; // lebar gambar
+    var imgHeight = 225; // tinggi gambar
     
 
-    setTimeout(init, 10);
+  setTimeout(init, 10);
     var odrag = document.getElementById("drag-container");
     var ospin = document.getElementById("spin-container");
     var aImg = ospin.getElementsByTagName("img");
     var aEle = [...aImg]; 
 
-    ospin.style.width = imgWidth + "px";
-    ospin.style.height = imgHeight + "px";
-
-
+   ospin.style.width = imgWidth + "px";
+   ospin.style.height = imgHeight + "px";
 
       function init(delayTime) {
         for (var i = 0; i < aEle.length; i++) {
@@ -179,11 +174,11 @@ footer {
           aEle[i].style.transitionDelay =
             delayTime || (aEle.length - i) / 4 + "s";
         }
-      }
+     }
 
       function applyTranform(obj) {
         // Constrain the angle of camera (between 0 and 180)
-        if (tY > 180) tY = 180;
+        if (tY >500) tY = 0;
         if (tY < 0) tY = 0;
 
         // Apply the angle
@@ -201,7 +196,7 @@ footer {
         desX = 0,
         desY = 0,
         tX = 0,
-        tY = 10;
+        tY = 0;
 
       // auto spin
       if (autoRotate) {
@@ -210,9 +205,6 @@ footer {
           rotateSpeed
         )}s infinite linear`;
       }
-
-      // add background music
-  
 
       // setup events
       document.onpointerdown = function(e) {
@@ -227,8 +219,8 @@ footer {
             nY = e.clientY;
           desX = nX - sX;
           desY = nY - sY;
-          tX += desX * 0.1;
-          tY += desY * 0.1;
+          tX += desX * 0.3;
+          tY += desY * 0.0;
           applyTranform(odrag);
           sX = nX;
           sY = nY;
@@ -238,29 +230,29 @@ footer {
           odrag.timer = setInterval(function() {
             desX *= 0.95;
             desY *= 0.95;
-            tX += desX * 0.1;
-            tY += desY * 0.1;
+            tX += desX * 0.5;
+            tY += desY * 0.5;
             applyTranform(odrag);
             playSpin(false);
-            if (Math.abs(desX) < 0.5 && Math.abs(desY) < 0.5) {
+            if (Math.abs(desX) < 0.1 && Math.abs(desY) < 0.1) {
               clearInterval(odrag.timer);
               playSpin(true);
             }
-          }, 17);
+          }, 8);
           this.onpointermove = this.onpointerup = null;
         };
 
         return false;
       };
 
-
     </script>
 
 </head>
+<h2>Situs web kami masih dalam pengembangan</h2>
 <body>
   <div class="login-container">
     <div class="login-form">
-      <a href="index(88).html" target="_blank">Selanjutnya</a>
+      <a href="https://tommydev27.github.io/tommy.website1/" target="_blank">Kembali</a>
     </div>
   </div>
          <footer>Design Tommy | Versi 1.0</footer>
