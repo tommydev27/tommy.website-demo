@@ -1,48 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" />
-    <title>tommy.developer</title>
-  <style>
+  <html lang="id">
+    <head>
+      <meta name="google-site-verification" content="pwKvYalfLxSFwpDlCsan4yS_mEsUdJvUDrI2wKiIHXk" />
 
+      <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Tommy Website">
+      <meta property="og:description" content="Create stunning AI-generated images with ease using Tommy APP.">
+      <meta property="og:image" content="https://iili.io/2Q0YlhF.md.png">
+      <meta property="og:url" content="https://tommydev27.github.io/tommy.fb-web/">
+      <meta property="og:type" content="website">
+      <meta property="fb:app_id" content="1245016886587008">
+      
+      <title>Tommy Website</title>
 
+      <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="style.css">
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-FK1EY26W82">
+      </script>
+    
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FK1EY26W82');
+    </script>
+  </heade>
+    <body>
+      
+      <style>
 
       body {
-        height: 100%;
-        font-family: 'Courier New', monospace;
-        /* for touch screen */
+        margin-top: 10px;  
+        font-family: Arial, sans-serif;
         touch-action: none;
-      }
-        .header {
-            position: absolute;
-            top: 20px; /* Adjust this value as needed */
-            text-align: center;
+          }
+          
+        .container {
             width: 100%;
-            z-index: 1; /* Ensure it stays on top */
+            margin-top: -10px;  
+            margin-bottom: 0px; 
+            font-weight: bold;
+            font-size:12px;
+            overflow: hidden;
+            position: relative;
         }
-.profile-name {
-  font-size: 15px;
-  font-weight: bold;
-  color: #333;
-  margin: 0 auto; /* Menyelaraskan teks ke tengah */
-  text-align: center;
-}
+              
+    .profile-name {
+        font-size: 20px;
+        font-weight: bold;
+        color: #333;
+        padding: 5px;
+        margin: 0 auto; 
+        text-align: center;
+        }
 
-.profile-name .material-symbols-outlined {
-  font-size: 15px;
-  color: white;
-  background-color: #007bff;
-  border-radius: 50%;
-}
-
-hr {
-  border: 0;
-  height: 1px;
-  background-color: #000;
-  margin: 10px 0;
-}
+    hr {
+      border: 0;
+      height: 1px;
+      background-color: #000;
+      margin: 0px 0;
+    }
               
 
   img {
@@ -51,7 +72,7 @@ hr {
       height: auto;
     }
     
-          #drag-container,
+    #drag-container,
       #spin-container {
         position: relative;
         display: -webkit-box;
@@ -63,9 +84,7 @@ hr {
  
       }
     
-    
-    
-          #drag-container img,
+     #drag-container img,
       #drag-container video {
         -webkit-transform-style: preserve-3d;
         transform-style: preserve-3d;
@@ -82,10 +101,7 @@ hr {
         box-shadow: 0 0 1px black;
         -webkit-box-reflect: below 10px
           linear-gradient(transparent, transparent, #0005);
-          
       }
-    
-    
     
     #drag-container,
     #spin-container {
@@ -95,8 +111,8 @@ hr {
       transform-style: preserve-3d;
       transform: rotateX(-10deg);
     }
-#drag-container img, 
-#drag-container video {
+    #drag-container img, 
+    #drag-container video {
     position: absolute;
     left: 0;
     top: 50px; /* Menggeser gambar ke bawah dengan jarak dari atas */
@@ -109,8 +125,6 @@ hr {
       box-shadow: 0 0 5px #0056b3;
     }
     
-
-
       #ground {
         width: 50px;
         height: 50px;
@@ -174,131 +188,109 @@ hr {
           -webkit-transform: rotateY(0deg);
           transform: rotateY(0deg);
         }
-      }
+         }
 
-.login-container {
-  position: absolute;
-   left: 50%; /* Mengatur agar berada di tengah */
-  transform: translateX(-50%); /* Menjaga agar tepat di tengah */
-  bottom: 80px;
-  width: 100%; /* Memenuhi lebar layar */
-  display: flex;
-  justify-content: center; /* Posisi tombol di tengah */
-}
-
-
-
-h2 {
-  font-size: 13px;
-  color: #007bff;
-  text-align: center;
-  margin-top: 250px;
-  margin-left: 15px;
-  margin-right: 15px;
-  padding: 10px;
-}
-    
-footer {
-  position: fixed;
-  bottom: 95%;
-  left: 20%; /* Mengatur agar berada di tengah */
-  transform: translateX(-50%); /* Menjaga agar tepat di tengah */
-  font-size: 9px;
-  color: #007bff;
-  transition: color 0.3s ease;
-}
-
-#music-container {
-  width: 350px;
-  height: 280px;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  background: #000;
-  position: absolute;
-  top: 79%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  touch-action: none;
-  cursor: grab;
-}
-
-#music-container img {
-  width: 100%;          /* Menyesuaikan lebar gambar dengan kontainer */
-  height: 100%;         /* Menyesuaikan tinggi gambar dengan kontainer */
-
-}
-
-        /* Kontainer untuk teks */
-        .container {
-            width: 100%;
-            line-height: 1px; /* Mengatur jarak antar baris teks */
-  margin-top: 0px;    /* Menghapus jarak di atas elemen */
-  margin-bottom: 0px; 
-            font-weight: bold;
-            font-size:12px;
-            height: 30px; /* Atur tinggi sesuai keinginan */
+          #music-container {
+            width: 350px;
+            height: 280px;
+            border-radius: 16px;
             overflow: hidden;
-            position: relative;
-            border: 1px solid gray;
-        }
-
-        /* Animasi teks berjalan naik */
-        .scrolling-text {
-          margin-left: 10px;  
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            background: #000;
             position: absolute;
-            bottom: 0%;
-            animation: scrollUp 6s linear infinite;
-        }
-
-        /* Efek animasi untuk membuat teks berjalan naik */
-        @keyframes scrollUp {
-            0% {
-                bottom: -100%;
+            top: 79%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            touch-action: none;
+            cursor: grab;
             }
-            100% {
-                bottom: 100%;
+
+        #music-container img {
+            width: 100%; 
+            height: 100%;
             }
+            
+        .scrolling-text {
+          width: 98%;
+          text-align: center;
+          height: 28px;
+          border: 1px solid gray;
+          position: relative;
+          overflow: hidden;
+          margin: 0 auto; 
+          }
+
+          .scrolling-text p {
+          position: absolute;
+          font-size: 18px;
+          padding: 3px;
+          white-space: nowrap; 
+          margin: 0;
+          animation: scrollLeft 30s linear infinite;
+          }
+
+        .scrolling-text p:nth-child(1) {
+          animation-delay: 0s;
+          }
+
+        .scrolling-text p:nth-child(2) {
+          animation-delay: 3s;
+          }
+
+        .scrolling-text p:nth-child(3) {
+          animation-delay: 6s;
+          }
+
+        @keyframes scrollLeft {
+        0% {
+        transform: translateX(100%); /* Mulai dari kanan luar */
         }
-
-
+        100% {
+        transform: translateX(-100%); /* Bergerak ke kiri luar */
+        }
+        }
+        
   </style>
 </head>
-  <body>
-      <p class="profile-name">Tommy Developer
-        <span class="material-symbols-outlined">check_circle</span>
-    </p>
-<hr> <!-- Garis horizontal -->
-<!-- Carousel -->
-<!-- Carousel -->
-<div id="drag-container">
-    <div id="spin-container">
+<body>
+  <div class="container">
+    <p class="profile-name">Info Website</p>
+    <hr>
+    
+    <div id="drag-container">
+      <div id="spin-container">
         <img src="https://iili.io/2okTRvn.md.jpg" alt="img1" data-link="https://halaman1.com">
         <img src="https://iili.io/2okuQDb.md.jpg" alt="Image 2" data-link="https://halaman2.com">
         <img src="https://iili.io/2okAgIa.md.jpg" alt="Image 3" data-link="https://halaman3.com">
         <img src="https://iili.io/2IgFS1t.md.jpg" alt="Image 4" data-link="https://halaman4.com">
         <img src="https://iili.io/2Igqr21.md.jpg" alt="Image 5" data-link="https://halaman5.com">
+        <img src="https://iili.io/dw83Xm7.md.jpg" alt="">
+        <img src="https://iili.io/dw8KMD7.md.jpg" alt="">
+        <img src="https://iili.io/dw8qsup.md.jpg" alt="">
+        <img src="https://iili.io/dw8xKej.md.jpg" alt="">
+        <img src="https://iili.io/dw8zSMN.md.jpg" alt="">
+        <img src="https://iili.io/dw8TNQR.md.jpg" alt="">
+        <img src="https://iili.io/dw41ylt.md.jpg" alt="">
+        <img src="https://iili.io/dwvidTN.md.jpg" alt="">
+      </div>
+      <div id="ground"></div>
     </div>
-    <div id="ground"></div>
+
+    <div class="scrolling-text">
+  <p>situs web kami masih dalam pengembangan. sebatas uji coba
+  belum sepenuhnya berjalan dengan normal</p>
     </div>
 
-    <div class="container">
-        <div class="scrolling-text">
-            situs web kami masih dalam pengembangan. <p>sebatas uji coba <p>belum sepenuhnya berjalan dengan normal
-        </div>
-    </div>
+  </div>
 
-<div id="music-container">
-  <img src="https://iili.io/25NvHy7.md.png" alt="Image">
-</div>
+  <div id="music-container">
+    <img src="https://iili.io/2Q0YlhF.md.png" alt="Image">
+  </div>
 
-
-        <!-- Button -->
-         <footer>Design Tommy | Versi 1.0</footer>
   <script>
 
       // You can change global variables here:
-      var radius = 150; // how big of the radius
+      var radius = 250; // how big of the radius
       var autoRotate = true; // auto rotate or not
       var rotateSpeed = -60; // unit: seconds/360 degrees
       var imgWidth = 130; // width of images (unit: px)
